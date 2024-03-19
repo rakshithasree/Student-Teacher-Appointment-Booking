@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Appointment Booking</title>
+</head>
+<body>
+    <header id="home">
+      <nav>
+        <h1>STUDENT TEACHER APPOINTMENT BOOKING</h1>
+        <ul>
+            <li><a href="#Home">Home</a></li>
+            <li><a href="#Book Appointment">Book Appointment</a></li>
+            <li><a href="#New Appointment">New Appointment</a></li>
+        </ul>
+      </nav>
+      <div class="welcome-event"></div>
+    </header>
+    
+      <section id="Home">
+        <h1 class="section-title">About Us</h1>
+        <div class="events-container">
+          <p>Welcome to our Student Teacher Appointment Booking App! We understand the importance of seamless communication between students and teachers for effective learning. Our app simplifies the process of scheduling appointments, making it easier than ever for students to connect with their teachers. With user-friendly features and intuitive design, managing appointments has never been more convenient. Say goodbye to scheduling conflicts and hello to hassle-free communication. 
+            Join us in revolutionizing the way students and teachers interact. Start booking your appointments today!</p>
+        </div>
+    </section>
+        <section id="Book Appointment">
+            <h1 class="section-title">Book an Appointment</h1>
+            <div class="events-container">
+              <br><p>Booking an appointment is quick and easy with our Student Teacher Appointment Booking App. Simply follow these steps:</p></br>
+              <ol>
+                <li>Fill in your name: Enter your full name in the designated field so that the teacher knows who the appointment is for.</li>
+                <li>Select the teacher's name: Choose the name of the teacher you wish to schedule an appointment with from the dropdown menu. This ensures your appointment request goes directly to the intended recipient.</li>
+                <li>Specify the number of attendees: Indicate how many people will be attending the appointment, including yourself if applicable. This helps the teacher prepare for the meeting accordingly.</li>
+                <li>After providing the reason for your appointment, you'll have the option to choose between a free or paid mode for your meeting. Select the mode that best suits your needs.</li>
+                <li>Once you've made your selection, click on save button and navigate to the top of the page. There, you'll find a summary of your appointment details displayed prominently. Confirm that all the information is correct, and if everything looks good, you can proceed to book your appointment right from there.</li>
+                <li>Simply click on the 'Book Appointment' button, and our system will handle the rest. You'll receive a confirmation of your appointment, and the teacher will be notified as well.</li>
+              </ol>
+              
+              <br><p>Thank you for choosing our Student Teacher Appointment Booking App for your scheduling needs. We're here to make the process as seamless as possible for you.</p></br>
+              
+            </div>
+        </section>
+        <section id="New Appointment">
+            <h1 class="section-title">New Appointment</h1>
+            <form class="form">
+                <input type="text" id="name" placeholder="Name">
+                <input type="text" id="Teachersname" placeholder="Teacher's Name">
+                <input type="number" id="attendee" placeholder="Number of Attendees">
+                <textarea id="description" cols="30" rows="10" placeholder="Describe the reason for your Appointment"></textarea>
+                <select id="status">
+                    <option value="0">Free</option>
+                    <option value="1">Paid</option>
+                </select>
+                <button class="btn btn-primary">Save</button>
+            </form>
+        </section>
+    
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.9.1/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyD9dNG-kvbtJ8W8nWgrpNGw1FNpewI7xww",
+    authDomain: "student-teacher-appointm-40e0c.firebaseapp.com",
+    databaseURL: "https://student-teacher-appointm-40e0c-default-rtdb.asia-southeast1.firebasedatabase.app/",
+    projectId: "student-teacher-appointm-40e0c",
+    storageBucket: "student-teacher-appointm-40e0c.appspot.com",
+    messagingSenderId: "240610285985",
+    appId: "1:240610285985:web:fc01382a074edcadf693e0"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  const db = firebase.firestore()
+</script>
+
+<script src="db.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
